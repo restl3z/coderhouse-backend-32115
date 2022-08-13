@@ -7,7 +7,7 @@ class Usuario {
   }
 
   getFullName = () => {
-    return `El nombre del usuario es ${this.nombre} ${this.apellido}.`;
+    return `${this.nombre} ${this.apellido}`;
   };
 
   addMascota = (newMascota) => {
