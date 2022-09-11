@@ -1,0 +1,14 @@
+div(class="container")
+  form(action="/productos", method="post", class="container")
+    div(class="mb-3 form-group")
+      label(for="title", class="form-label") Title 
+      input(type="text", class="form-control", id="title", name="title")
+    div(class="mb-3 form-group")
+      label(for="price", class="form-label") Price 
+      input(type="number", class="form-control", id="price", name="price")
+    div(class="mb-3 form-group")
+      label(for="thumbnail", class="form-label") Thumbnail 
+      input(type="text", class="form-control", id="thumbnail", name="thumbnail")
+    input(type="submit", value="Ingresar dato", class="btn btn-primary form-control")
+  a(href="/productos")
+    button(class="btn btn-secondary mt-3") Ver el Listado de Productos
