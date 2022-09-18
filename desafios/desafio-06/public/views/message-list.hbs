@@ -1,0 +1,24 @@
+<div class='container'>
+  {{#if messages.length}}
+    <table class='container table'>
+      <thead>
+        <tr>
+          <th scope='col'>User</th>
+          <th scope='col'>Date</th>
+          <th scope='col'>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each messages}}
+          <tr>
+            <td><b style='color:blue;'>{{this.email}}</b></td>
+            <td style='color:brown;'>{{this.date}}</td>
+            <td <i style="color:green;">{{this.message}}</i></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <h3 class='alert alert-danger'>No hay mensajes</h3>
+  {{/if}}
+</div>
