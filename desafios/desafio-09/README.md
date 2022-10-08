@@ -1,4 +1,4 @@
-### Creación del entorno
+## Creación del entorno
 
 - Crear un directorio local para contener la base de datos
 
