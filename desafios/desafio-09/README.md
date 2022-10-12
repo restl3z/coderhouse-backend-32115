@@ -230,5 +230,13 @@ mongosh -u {username} -p
   Connecting to:          mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&authSource=ecommerce&appName=mongosh+1.6.0
   Using MongoDB:          6.0.2
   Using Mongosh:          1.6.0
+
   For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+  test> show dbs
+  ecommerce  112.00 KiB
+  test> use ecommerce
+  switched to db ecommerce
+  ecommerce> db.productos.deleteMany({})
+  MongoServerError: not authorized on ecommerce to execute command { delete: "productos", deletes: [ { q: {}, limit: 0 } ], ordered: true, lsid: { id: UUID("b6fb5a67-f595-4775-b2a2-f8f879b56bff") }, $db: "ecommerce" }
   ```
