@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "timestamp": "9/18/2022, 3:10:33 PM",
+    "description": "Escuadra",
+    "code": 1001,
+    "stock": 500,
+    "id": 1
+  },
+  {
+    "title": "Calculadora",
+    "price": 234.56,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+    "timestamp": "9/18/2022, 3:10:33 PM",
+    "description": "Calculadora",
+    "code": 1002,
+    "stock": 600,
+    "id": 2
+  },
+  {
+    "title": "Globo Terráqueo",
+    "price": 345.67,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png",
+    "timestamp": "9/18/2022, 3:10:33 PM",
+    "description": "Globo Terráqueo",
+    "code": 1003,
+    "stock": 1200,
+    "id": 3
+  },
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "description": "Escuadra",
+    "code": 1001,
+    "stock": 500,
+    "id": 4,
+    "timestamp": "9/25/2022, 2:49:33 AM"
+  },
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "description": "Escuadra",
+    "code": 1001,
+    "stock": 500,
+    "id": 5,
+    "timestamp": "9/25/2022, 2:49:47 AM"
+  },
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "description": "Escuadra",
+    "code": 1001,
+    "stock": 500,
+    "id": 6,
+    "timestamp": "9/25/2022, 2:50:30 AM"
+  },
+  {
+    "title": "Escuadra",
+    "price": 123.45,
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+    "description": "Escuadra",
+    "code": 1001,
+    "stock": 500,
+    "id": 7,
+    "timestamp": "9/25/2022, 2:50:35 AM"
+  }
+]
