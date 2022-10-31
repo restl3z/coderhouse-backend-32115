@@ -1,10 +1,8 @@
 import { Router } from 'express';
-import DAO_Products_File from '../classes/daos/products/dao_products_file.js';
+import { dao_products as container_product } from '../persistence/daos/daos_config.js';
 
 const IS_ADMIN = true;
-
 const router = Router();
-const container_product = new DAO_Products_File('./db/products.json');
 
 router.get('/', async (req, res) => {
   try {
@@ -18,8 +16,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
+  const lookupID = parseInt(req.params.id);
   try {
-    const lookupID = parseInt(req.params.id);
     const found_product = await container_product.getByID(lookupID);
     found_product
       ? res.status(200).send(found_product)
@@ -39,9 +37,9 @@ router.post('/', async (req, res) => {
       details: `${req.path} endpoint with ${req.method} method unauthorized`,
     });
   }
+  const new_product = req.body;
   try {
-    const new_product = req.body;
-    new_product.id = await container_product.save(new_product);
+    await container_product.save(new_product);
     res.status(200).send({
       message: 'Product added successfully',
       product: new_product,
@@ -61,17 +59,21 @@ router.put('/:id', async (req, res) => {
       details: `${req.path} endpoint with ${req.method} method unauthorized`,
     });
   }
+  const lookupID = parseInt(req.params.id);
+  const new_parameters = req.body;
   try {
-    const lookupID = parseInt(req.params.id);
-    const new_parameters = req.body;
     const updated_product = await container_product.updateByID(
       lookupID,
       new_parameters
     );
-    res.status(200).send({
-      message: 'Product modified successfully',
-      product: updated_product,
-    });
+    updated_product
+      ? res.status(200).send({
+          message: 'Product modified successfully',
+          product: updated_product,
+        })
+      : res.status(404).send({
+          message: 'Product not found',
+        });
   } catch (error) {
     res.status(500).send({
       message: 'Could not modify product',
@@ -87,12 +89,16 @@ router.delete('/:id', async (req, res) => {
       details: `${req.path} endpoint with ${req.method} method unauthorized`,
     });
   }
+  const lookupID = parseInt(req.params.id);
   try {
-    const lookupID = parseInt(req.params.id);
-    await container_product.deleteByID(lookupID);
-    res.status(200).send({
-      message: 'Product deleted successfully',
-    });
+    const deleted_product = await container_product.deleteByID(lookupID);
+    deleted_product
+      ? res.status(200).send({
+          message: 'Product deleted successfully',
+        })
+      : res.status(404).send({
+          message: 'Product not found',
+        });
   } catch (error) {
     res.status(500).send({
       message: 'Could not delete product',
