@@ -1,0 +1,26 @@
+<div class='container'>
+  {{#if messages.length}}
+    <table class='container table'>
+      <thead>
+        <tr>
+          <th scope='col'>User</th>
+          <th scope='col'>Date</th>
+          <th scope='col'>Message</th>
+          <th scope='col'>Avatar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each messages}}
+          <tr>
+            <td><b style='color:blue;'>{{this.author.email}}</b></td>
+            <td style='color:brown;'>{{this.date}}</td>
+            <td><i style='color:green;'>{{this.message}}</i></td>
+            <td><img src='{{this.author.avatar}}' width='40' height='40' /></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <h3 class='alert alert-danger'>No messages</h3>
+  {{/if}}
+</div>
