@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Info</title>
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Arguments</th>
+            <td><%= info.arguments %></td>
+          </tr>
+          <tr>
+            <th scope="row">Operating System</th>
+            <td><%= info.operating_system %></td>
+          </tr>
+          <tr>
+            <th scope="row">NodeJS Version</th>
+            <td><%= info.node_version %></td>
+          </tr>
+          <tr>
+            <th scope="row">Reserved Memory (RSS)</th>
+            <td><%= info.rss %></td>
+          </tr>
+          <tr>
+            <th scope="row">Execution Path</th>
+            <td><%= info.execution_path %></td>
+          </tr>
+          <tr>
+            <th scope="row">Process ID</th>
+            <td><%= info.process_id %></td>
+          </tr>
+          <tr>
+            <th scope="row">Project Folder</th>
+            <td><%= info.project_folder %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
