@@ -1,0 +1,697 @@
+Statistical profiling result from isolate-0x55f26d4ab260-97915-v8.log, (870 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    308   35.4%          /snap/node/6905/bin/node
+     22    2.5%          /snap/core20/1738/usr/lib/x86_64-linux-gnu/libc-2.31.so
+      3    0.3%          /snap/core20/1738/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.3%    0.6%  LazyCompile: *resolve node:path:1091:10
+      2    0.2%    0.4%  Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      2    0.2%    0.4%  Function: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:714:38
+      1    0.1%    0.2%  LazyCompile: *realpathSync node:fs:2474:22
+      1    0.1%    0.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:676:37
+      1    0.1%    0.2%  Function: ^tryExtensions node:internal/modules/cjs/loader:447:23
+      1    0.1%    0.2%  Function: ^isURLInstance node:internal/url:1560:23
+      1    0.1%    0.2%  Function: ^getPathFromURLPosix node:internal/url:1463:29
+      1    0.1%    0.2%  Function: ^_copy node:buffer:205:15
+      1    0.1%    0.2%  Function: ^Stats node:internal/fs/utils:501:15
+      1    0.1%    0.2%  Function: ^Module._load node:internal/modules/cjs/loader:807:24
+
+ [C++]:
+   ticks  total  nonlib   name
+    204   23.4%   38.0%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     60    6.9%   11.2%  epoll_pwait@@GLIBC_2.6
+     56    6.4%   10.4%  node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     44    5.1%    8.2%  __write@@GLIBC_2.2.5
+     19    2.2%    3.5%  node::crypto::SecureContext::AddRootCerts(v8::FunctionCallbackInfo<v8::Value> const&)
+     17    2.0%    3.2%  fwrite@@GLIBC_2.2.5
+     14    1.6%    2.6%  node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    1.0%    1.7%  node::crypto::TLSWrap::GetPeerCertificate(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.7%    1.1%  node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.7%    1.1%  node::crypto::TLSWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.7%    1.1%  _IO_file_xsputn@@GLIBC_2.2.5
+      5    0.6%    0.9%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      5    0.6%    0.9%  node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.5%    0.7%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.5%    0.7%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      4    0.5%    0.7%  node::crypto::CryptoJob<node::crypto::PBKDF2Traits>::Run(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.5%    0.7%  _init
+      4    0.5%    0.7%  __GI___pthread_mutex_unlock
+      3    0.3%    0.6%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.3%    0.6%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.3%    0.6%  node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.3%    0.6%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      3    0.3%    0.6%  __mprotect@@GLIBC_PRIVATE
+      2    0.2%    0.4%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.2%    0.4%  std::ostream::operator<<(int)@@GLIBCXX_3.4
+      2    0.2%    0.4%  node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.4%  node::crypto::SecureContext::Init(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.4%  node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.2%    0.4%  cfree@GLIBC_2.2.5
+      2    0.2%    0.4%  __munmap@@GLIBC_PRIVATE
+      2    0.2%    0.4%  __GI___pthread_mutex_lock
+      1    0.1%    0.2%  v8::internal::FunctionCallbackArguments::FunctionCallbackArguments(v8::internal::Isolate*, v8::internal::Object, v8::internal::HeapObject, v8::internal::Object, v8::internal::HeapObject, unsigned long*, int)
+      1    0.1%    0.2%  syscall@@GLIBC_2.2.5
+      1    0.1%    0.2%  node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  node::i18n::ConverterObject::Decode(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  node::fs::ReadDir(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  node::crypto::TLSWrap::Wrap(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.1%    0.2%  fputc@@GLIBC_2.2.5
+      1    0.1%    0.2%  fflush@@GLIBC_2.2.5
+      1    0.1%    0.2%  do_futex_wait.constprop.0
+      1    0.1%    0.2%  __pthread_cond_wait
+      1    0.1%    0.2%  __pthread_cond_signal
+      1    0.1%    0.2%  __libc_malloc@@GLIBC_2.2.5
+      1    0.1%    0.2%  __gmtime_r@@GLIBC_2.2.5
+      1    0.1%    0.2%  __GI___pthread_rwlock_unlock
+      1    0.1%    0.2%  __GI___pthread_rwlock_rdlock
+      1    0.1%    0.2%  _IO_file_write@@GLIBC_2.2.5
+      1    0.1%    0.2%  _IO_default_xsputn@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+     15    1.7%    2.8%  JavaScript
+    522   60.0%   97.2%  C++
+     46    5.3%    8.6%  GC
+    333   38.3%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    204   34.8%   23.4%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    131   22.3%   15.1%  node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+     56    9.5%    6.4%  node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     33    5.6%    3.8%  __write@@GLIBC_2.2.5
+     19    3.2%    2.2%  node::crypto::SecureContext::AddRootCerts(v8::FunctionCallbackInfo<v8::Value> const&)
+     17    2.9%    2.0%  fwrite@@GLIBC_2.2.5
+     14    2.4%    1.6%  node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     11    1.9%    1.3%  node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      9    1.5%    1.0%  node::crypto::TLSWrap::GetPeerCertificate(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    1.2%    0.8%  node::loader::ModuleWrap::Link(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    1.0%    0.7%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    1.0%    0.7%  node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    1.0%    0.7%  node::crypto::TLSWrap::Start(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    1.0%    0.7%  _IO_file_xsputn@@GLIBC_2.2.5
+      5    0.9%    0.6%  node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.7%    0.5%  void node::StreamBase::JSMethod<&node::StreamBase::WriteBuffer>(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.7%    0.5%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+      4    0.7%    0.5%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+      4    0.7%    0.5%  node::crypto::CryptoJob<node::crypto::PBKDF2Traits>::Run(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.5%    0.3%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.5%    0.3%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.5%    0.3%  node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.5%    0.3%  node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      3    0.5%    0.3%  _init
+      2    0.3%    0.2%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.3%    0.2%  std::ostream::operator<<(int)@@GLIBCXX_3.4
+      2    0.3%    0.2%  node::crypto::SecureContext::Init(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.3%    0.2%  node::TCPWrap::Connect(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.3%    0.2%  cfree@GLIBC_2.2.5
+      1    0.2%    0.1%  v8::internal::FunctionCallbackArguments::FunctionCallbackArguments(v8::internal::Isolate*, v8::internal::Object, v8::internal::HeapObject, v8::internal::Object, v8::internal::HeapObject, unsigned long*, int)
+      1    0.2%    0.1%  syscall@@GLIBC_2.2.5
+      1    0.2%    0.1%  node::loader::ModuleWrap::SetSyntheticExport(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  node::i18n::ConverterObject::Decode(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  node::fs::ReadDir(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  node::crypto::TLSWrap::Wrap(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.2%    0.1%  fputc@@GLIBC_2.2.5
+      1    0.2%    0.1%  fflush@@GLIBC_2.2.5
+      1    0.2%    0.1%  __mprotect@@GLIBC_PRIVATE
+      1    0.2%    0.1%  __libc_malloc@@GLIBC_2.2.5
+      1    0.2%    0.1%  __GI___pthread_mutex_lock
+      1    0.2%    0.1%  _IO_file_write@@GLIBC_2.2.5
+      1    0.2%    0.1%  _IO_default_xsputn@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    308   35.4%  /snap/node/6905/bin/node
+    163   52.9%    /snap/node/6905/bin/node
+     17   10.4%      /snap/node/6905/bin/node
+      4   23.5%        Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      3   75.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      2   66.7%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1   33.3%            Function: ^trySelf node:internal/modules/cjs/loader:488:17
+      1   25.0%          Function: ^resolveExports node:internal/modules/cjs/loader:519:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1    5.9%        LazyCompile: ~updateRsNoPrimaryFromMember /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology_description.js:337:37
+      1  100.0%          LazyCompile: ~update /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology_description.js:131:11
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sdam/topology.js:320:24
+      1    5.9%        LazyCompile: ~toIdentifier /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/toidentifier/index.js:24:23
+      1  100.0%          LazyCompile: ~forEachCode /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/http-errors/index.js:259:38
+      1  100.0%            /snap/node/6905/bin/node
+      1    5.9%        LazyCompile: ~isIPv6 node:internal/net:38:16
+      1  100.0%          LazyCompile: ~isIP node:internal/net:45:14
+      1  100.0%            LazyCompile: ~parseSslOptions /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:237:25
+      1    5.9%        LazyCompile: ~isBad node:tls:195:17
+      1  100.0%          /snap/node/6905/bin/node
+      1  100.0%            LazyCompile: ~check node:tls:177:15
+      1    5.9%        LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:290:28
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:894:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1034:30
+      1    5.9%        LazyCompile: ~argsert file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/argsert.js:4:24
+      1  100.0%          LazyCompile: ~boolean file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:168:12
+      1  100.0%            LazyCompile: ~addHelpOpt file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:127:15
+      1    5.9%        LazyCompile: ~MongoCredentials /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/mongo_credentials.js:31:16
+      1  100.0%          LazyCompile: ~merge /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/mongo_credentials.js:122:17
+      1  100.0%            LazyCompile: ~transform /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:458:18
+      1    5.9%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/helpers/pluralize.js:86:34
+      1  100.0%          /snap/node/6905/bin/node
+      1  100.0%            LazyCompile: ~pluralize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/helpers/pluralize.js:82:19
+      1    5.9%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/categories.js:76:27
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/configuration.js:51:21
+      1  100.0%            /snap/node/6905/bin/node
+      1    5.9%        Function: ^toString node:buffer:789:46
+      1  100.0%          Function: ^deserializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1    5.9%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            Function: ^<anonymous> node:internal/bootstrap/loaders:290:15
+      1    5.9%        Function: ^deserializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:161:21
+      1    5.9%        Function: ^Module node:internal/modules/cjs/loader:197:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      8    4.9%      Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      6   75.0%        Function: ^resolveExports node:internal/modules/cjs/loader:519:24
+      6  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      5   83.3%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1   16.7%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      2   25.0%        Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      2  100.0%          Function: ^trySelf node:internal/modules/cjs/loader:488:17
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      6    3.7%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1218:39
+      6  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      6  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      6  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      4    2.5%      LazyCompile: *resolve node:path:1091:10
+      2   50.0%        Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      2  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      2  100.0%            Function: ^trySelf node:internal/modules/cjs/loader:488:17
+      2   50.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      4    2.5%      Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      4  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      4  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      4  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      3    1.8%      LazyCompile: ~processIncomingData /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      2   66.7%        LazyCompile: ~_write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1   50.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:286:16
+      1   50.0%          Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:286:16
+      1   33.3%        Function: ^_write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:286:16
+      2    1.2%      LazyCompile: ~serializeInto /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/serializer.js:553:23
+      2  100.0%        Function: ^serializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/serializer.js:260:25
+      2  100.0%          LazyCompile: ~serializeInto /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/serializer.js:553:23
+      1   50.0%            LazyCompile: ~serialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:110:19
+      1   50.0%            Function: ^serializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/serializer.js:260:25
+      2    1.2%      LazyCompile: ~realpathSync node:fs:2474:22
+      2  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      2  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      2  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2    1.2%      LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1   50.0%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1   50.0%        Function: ^<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      2    1.2%      LazyCompile: ~get options /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:76:16
+      1   50.0%        LazyCompile: ~db /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:214:7
+      1  100.0%          LazyCompile: ~_setClient /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/connection.js:859:20
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/connection.js:810:20
+      1   50.0%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/operations/create_collection.js:39:10
+      1  100.0%          LazyCompile: ~execute /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/operations/create_collection.js:38:12
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/operations/operation.js:28:51
+      2    1.2%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:114:43
+      1   50.0%        LazyCompile: ~maybeCallback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/utils.js:336:23
+      1  100.0%          LazyCompile: ~connect /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:110:12
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/connection.js:799:31
+      1   50.0%        /snap/node/6905/bin/node
+      2    1.2%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:88:85
+      2  100.0%        LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      2  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:61:44
+      2  100.0%            Function: ^emit node:events:460:44
+      2    1.2%      LazyCompile: *realpathSync node:fs:2474:22
+      2  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:440:20
+      2  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:431:17
+      2  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:447:23
+      2    1.2%      Function: ^deserializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      2  100.0%        LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1   50.0%          LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:161:21
+      1  100.0%            LazyCompile: ~parse /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:222:10
+      1   50.0%          Function: ^deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:161:21
+      1  100.0%            Function: ^parse /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:426:10
+      5    1.6%    Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      3   60.0%      Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      3  100.0%        Function: ^trySelf node:internal/modules/cjs/loader:488:17
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      2   40.0%      Function: ^resolveExports node:internal/modules/cjs/loader:519:24
+      2  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      5    1.6%    Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      5  100.0%      Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      5  100.0%        Function: ^require node:internal/modules/cjs/helpers:102:31
+      2   40.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/utils.js:1:1
+      2  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1   20.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/schema/mixed.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1   20.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/command_monitoring_events.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1   20.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/debug/src/node.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      4    1.3%    Function: ^emit node:events:460:44
+      1   25.0%      LazyCompile: ~processIncomingData /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%        Function: ^_write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:286:16
+      1   25.0%      LazyCompile: ~afterConnect node:net:1253:22
+      1   25.0%      LazyCompile: ~addChunk node:internal/streams/readable:312:18
+      1  100.0%        LazyCompile: ~readableAddChunk node:internal/streams/readable:242:26
+      1  100.0%          Function: ^Readable.push node:internal/streams/readable:233:35
+      1  100.0%            LazyCompile: ~onStreamRead node:internal/stream_base_commons:167:22
+      1   25.0%      Function: ^Readable.pipe node:internal/streams/readable:666:35
+      1  100.0%        LazyCompile: ~Connection /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:38:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%            LazyCompile: ~callback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:269:31
+
+    204   23.4%  node::contextify::ContextifyContext::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+    204  100.0%    /snap/node/6905/bin/node
+    199   97.5%      Function: ^compileFunction node:vm:316:25
+    195   98.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1073:18
+    194   99.5%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+    186   95.9%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      8    4.1%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      4    2.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1073:18
+      4  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      4  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      5    2.5%      LazyCompile: ~compileFunction node:vm:316:25
+      5  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1073:18
+      5  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      5  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+
+     60    6.9%  epoll_pwait@@GLIBC_2.6
+
+     56    6.4%  node::builtins::BuiltinLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     56  100.0%    /snap/node/6905/bin/node
+     33   58.9%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     25   75.8%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      5   20.0%          Function: ~<anonymous> node:http:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    8.0%          Function: ~<anonymous> node:tls:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    8.0%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    8.0%          Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    8.0%          Function: ~<anonymous> node:_http_client:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%            LazyCompile: ~get node:crypto:369:8
+      1    4.0%          LazyCompile: ~lazyLoadStreams node:fs:2907:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:3050:17
+      1    4.0%          LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1    4.0%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:147:60
+      1    4.0%          LazyCompile: ~get node:dns:350:8
+      1  100.0%            /snap/node/6905/bin/node
+      1    4.0%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          Function: ~<anonymous> node:internal/assert/assertion_error:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          Function: ~<anonymous> node:child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          Function: ~<anonymous> node:assert:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    4.0%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5   15.2%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      5  100.0%          Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      5  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      3    9.1%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      3  100.0%          LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      3  100.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:253:58
+     22   39.3%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3   13.6%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3  100.0%            Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      3   13.6%        Function: ~<anonymous> node:internal/fs/promises:1:1
+      3  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      2    9.1%        LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      2  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      2  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    9.1%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%            Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      2    9.1%        Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      2  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      2    9.1%        Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      2  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1    4.5%        LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:574:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.5%        Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:574:38
+      1    4.5%        Function: ~<anonymous> node:internal/readline/interface:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    4.5%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    4.5%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    4.5%        Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      1    4.5%        Function: ~<anonymous> node:internal/dns/utils:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1    4.5%        Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~get BlockList node:net:1980:16
+      1    1.8%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+
+     44    5.1%  __write@@GLIBC_2.2.5
+     33   75.0%    /snap/node/6905/bin/node
+      1    3.0%      Script: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/src/passport/passport_local.js:1:1
+      1  100.0%        /snap/node/6905/bin/node
+      1  100.0%          node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1    3.0%      LazyCompile: ~writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%        LazyCompile: ~_write node:internal/streams/writable:286:16
+      1  100.0%          Function: ^Writable.write node:internal/streams/writable:336:36
+      1  100.0%            LazyCompile: ~ondata node:internal/streams/readable:764:18
+      1    3.0%      LazyCompile: ~writeInt32LE node:internal/buffer:860:22
+      1  100.0%        LazyCompile: ~toBin /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:345:10
+      1  100.0%          LazyCompile: ~writeCommand /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%            LazyCompile: ~write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:427:15
+      1    3.0%      LazyCompile: ~wrapfunction /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/depd/index.js:413:23
+      1  100.0%        Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/body-parser/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    3.0%      LazyCompile: ~streamIdentifier /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:415:26
+      1  100.0%        Function: ^Connection /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:38:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%            LazyCompile: ~callback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:269:31
+      1    3.0%      LazyCompile: ~serialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:110:19
+      1  100.0%        LazyCompile: ~toBin /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1  100.0%          LazyCompile: ~writeCommand /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%            LazyCompile: ~write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:427:15
+      1    3.0%      LazyCompile: ~selectColor /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/body-parser/node_modules/debug/src/debug.js:44:21
+      1  100.0%        LazyCompile: ~createDebug /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/body-parser/node_modules/debug/src/debug.js:63:21
+      1  100.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/body-parser/lib/types/raw.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    3.0%      LazyCompile: ~randomBytes node:internal/crypto/random:93:21
+      1  100.0%        LazyCompile: ~prepare /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:16:12
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:151:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:62:33
+      1    3.0%      LazyCompile: ~processIncomingData /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%        LazyCompile: ~_write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:286:16
+      1    3.0%      LazyCompile: ~parseHostName /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:773:65
+      1  100.0%        Function: ^URLStateMachine /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    3.0%      LazyCompile: ~parseAuthority /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:731:71
+      1  100.0%        LazyCompile: ~URLStateMachine /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    3.0%      LazyCompile: ~ok node:assert:410:12
+      1  100.0%        LazyCompile: ~store.set /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/promise_provider.js:36:21
+      1  100.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/promise_provider.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    3.0%      LazyCompile: ~keys node:internal/url:497:7
+      1  100.0%        LazyCompile: ~resolveSRVRecord /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:45:32
+      1  100.0%          /snap/node/6905/bin/node
+      1    3.0%      LazyCompile: ~getIndexes /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/helpers/schema/getIndexes.js:14:37
+      1  100.0%        LazyCompile: ~Schema.indexes /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/schema.js:2050:36
+      1  100.0%          LazyCompile: ~_ensureIndexes /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/model.js:1805:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongoose/lib/model.js:1765:52
+      1    3.0%      LazyCompile: ~get node:internal/streams/writable:790:8
+      1  100.0%        LazyCompile: ~afterConnect node:net:1253:22
+      1    3.0%      LazyCompile: ~fromArrayBuffer node:buffer:454:25
+      1  100.0%        LazyCompile: ~ensureBuffer /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/ensure_buffer.js:15:22
+      1  100.0%          LazyCompile: ~Binary /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/binary.js:42:20
+      1  100.0%            Function: ^deserializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    3.0%      LazyCompile: ~exports.USVString /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/webidl-conversions/lib/index.js:265:21
+      1  100.0%        LazyCompile: ~URL /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/whatwg-url/lib/URL.js:90:16
+      1  100.0%          LazyCompile: ~URLWithoutHost /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb-connection-string-url/lib/index.js:74:1
+      1  100.0%            LazyCompile: ~ConnectionString /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb-connection-string-url/lib/index.js:82:16
+      1    3.0%      LazyCompile: ~enable /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/express-session/node_modules/debug/src/debug.js:138:16
+      1  100.0%        Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/express-session/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    3.0%      LazyCompile: ~emitAfterScript node:internal/async_hooks:517:25
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    3.0%      LazyCompile: ~deserializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        LazyCompile: ~deserializeObject /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:161:21
+      1    3.0%      LazyCompile: ~continueScramConversation /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1  100.0%          LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1    3.0%      LazyCompile: ~connectionIsPerished /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:340:25
+      1  100.0%        LazyCompile: ~processWaitQueue /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:435:21
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:183:26
+      1  100.0%            Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    3.0%      LazyCompile: ~arrayClone node:events:865:20
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          LazyCompile: ~afterConnect node:net:1253:22
+      1    3.0%      LazyCompile: ~afterWrite node:internal/streams/writable:490:20
+      1  100.0%        LazyCompile: ~afterWriteTick node:internal/streams/writable:485:24
+      1  100.0%          LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    3.0%      LazyCompile: ~TLSSocket node:_tls_wrap:469:19
+      1  100.0%        Function: ^connect node:_tls_wrap:1605:35
+      1  100.0%          LazyCompile: ~makeConnection /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:256:24
+      1  100.0%            Function: ^connect /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1    3.0%      LazyCompile: ~Socket node:net:329:16
+      1  100.0%        LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%            LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1    3.0%      LazyCompile: ~Module.load node:internal/modules/cjs/loader:1025:33
+      1  100.0%        LazyCompile: ~Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/modules/esm/translators:160:67
+      1  100.0%            node::loader::ModuleWrap::Evaluate(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    3.0%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:299:23
+      1  100.0%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:486:35
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:360:48
+      1  100.0%            LazyCompile: ~callback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1    3.0%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:326:33
+      1  100.0%        /snap/node/6905/bin/node
+      1  100.0%          LazyCompile: ~makeConnection /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:256:24
+      1  100.0%            LazyCompile: ~connect /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1    3.0%      Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/deps.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1025:33
+      1    3.0%      Function: ^initSearchParams node:internal/url:1083:26
+      1  100.0%        Function: ^URLSearchParams node:internal/url:184:14
+      1  100.0%          LazyCompile: ~resolveSRVRecord /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/connection_string.js:45:32
+      1  100.0%            /snap/node/6905/bin/node
+      1    3.0%      Function: ^addListener node:events:604:58
+      1  100.0%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/mongo_client.js:114:43
+      1  100.0%          /snap/node/6905/bin/node
+      1    3.0%      /snap/node/6905/bin/node
+      1  100.0%        Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/compression/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+
+     22    2.5%  /snap/core20/1738/usr/lib/x86_64-linux-gnu/libc-2.31.so
+     20   90.9%    /snap/node/6905/bin/node
+      3   15.0%      /snap/node/6905/bin/node
+      1   33.3%        LazyCompile: ~isIPv6 node:internal/net:38:16
+      1  100.0%          LazyCompile: ~isIP node:internal/net:45:14
+      1  100.0%            LazyCompile: ~lookupAndConnect node:net:1129:26
+      1   33.3%        Function: ^realpathSync node:fs:2474:22
+      1  100.0%          Function: ^finalizeResolution node:internal/modules/esm/resolve:290:28
+      1  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:894:23
+      1   33.3%        Function: ^Module node:internal/modules/cjs/loader:197:16
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      2   10.0%      Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1   50.0%        LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      1   50.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1053:36
+      1    5.0%      LazyCompile: ~streamIdentifier /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:415:26
+      1  100.0%        LazyCompile: ~Connection /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:38:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%            LazyCompile: ~callback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:269:31
+      1    5.0%      LazyCompile: ~readFileHandle node:internal/fs/promises:426:30
+      1  100.0%        /snap/node/6905/bin/node
+      1    5.0%      LazyCompile: ~processTimers node:internal/timers:492:25
+      1    5.0%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    5.0%      LazyCompile: ~processIncomingData /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1  100.0%        LazyCompile: ~_write /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      1  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%            LazyCompile: ~_write node:internal/streams/writable:286:16
+      1    5.0%      LazyCompile: ~onParseError node:internal/url:564:22
+      1  100.0%        node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~URL node:internal/url:637:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1034:30
+      1    5.0%      LazyCompile: ~equals node:buffer:821:42
+      1  100.0%        LazyCompile: ~ObjectId.equals /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/objectid.js:179:42
+      1  100.0%          LazyCompile: ~compareTopologyVersion /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sdam/server_description.js:175:32
+      1  100.0%            LazyCompile: ~equals /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sdam/server_description.js:95:11
+      1    5.0%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%          LazyCompile: ~refresh node:internal/util/colors:10:10
+      1  100.0%            Function: ~<anonymous> node:internal/util/colors:1:1
+      1    5.0%      LazyCompile: ~createAppender /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:74:24
+      1  100.0%        LazyCompile: ~getAppender /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:59:21
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/appenders/index.js:139:41
+      1  100.0%            /snap/node/6905/bin/node
+      1    5.0%      LazyCompile: ~argsert file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/argsert.js:4:24
+      1  100.0%        LazyCompile: ~default file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:303:12
+      1  100.0%          LazyCompile: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:1128:36
+      1  100.0%            LazyCompile: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:1118:47
+      1    5.0%      LazyCompile: ~URLSearchParams node:internal/url:184:14
+      1  100.0%        Function: ^onParseComplete node:internal/url:545:25
+      1  100.0%          node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            Function: ^URL node:internal/url:637:14
+      1    5.0%      LazyCompile: ~Long.fromBits /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/long.js:89:30
+      1  100.0%        LazyCompile: ~Long.fromInt /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/long.js:98:29
+      1  100.0%          Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/long.js:45:36
+      1  100.0%            Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/long.js:1:1
+      1    5.0%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sdam/monitor.js:308:41
+      1  100.0%        LazyCompile: ~callback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%            LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1    5.0%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:152:83
+      1  100.0%        LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1  100.0%          Function: ^<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1  100.0%            Function: ^emit node:events:460:44
+      1    5.0%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+
+     19    2.2%  node::crypto::SecureContext::AddRootCerts(v8::FunctionCallbackInfo<v8::Value> const&)
+     19  100.0%    /snap/node/6905/bin/node
+     19  100.0%      LazyCompile: ~configSecureContext node:internal/tls/secure-context:124:29
+     19  100.0%        LazyCompile: ~createSecureContext node:_tls_common:99:29
+     19  100.0%          LazyCompile: ~connect node:_tls_wrap:1605:35
+     19  100.0%            LazyCompile: ~makeConnection /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connect.js:256:24
+
+     17    2.0%  fwrite@@GLIBC_2.2.5
+     17  100.0%    /snap/node/6905/bin/node
+      1    5.9%      LazyCompile: ~use /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/express/lib/application.js:194:23
+      1  100.0%        LazyCompile: ~server file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/src/server.js:14:16
+      1  100.0%          Script: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/src/main.js:1:1
+      1  100.0%            /snap/node/6905/bin/node
+      1    5.9%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    5.9%      LazyCompile: ~timestampLevelAndCategory /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/layouts.js:42:35
+      1  100.0%        LazyCompile: ~colouredLayout /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/layouts.js:73:24
+      1  100.0%          LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/appenders/console.js:5:10
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/log4js/lib/log4js.js:42:29
+      1    5.9%      LazyCompile: ~stringify node:internal/modules/esm/translators:94:19
+      1  100.0%        LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%          LazyCompile: ~moduleProvider node:internal/modules/esm/loader:452:28
+      1  100.0%            /snap/node/6905/bin/node
+      1    5.9%      LazyCompile: ~setInterval node:timers:210:21
+      1  100.0%        LazyCompile: ~setupConnectionsTracking node:_http_server:478:34
+      1  100.0%          LazyCompile: ~Server node:_http_server:488:16
+      1  100.0%            LazyCompile: ~createServer node:http:59:22
+      1    5.9%      LazyCompile: ~realpathSync node:fs:2474:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    5.9%      LazyCompile: ~patchProcessObject node:internal/process/pre_execution:112:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.9%      LazyCompile: ~onParseError node:internal/url:564:22
+      1  100.0%        node::url::(anonymous namespace)::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~URL node:internal/url:637:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1034:30
+      1    5.9%      LazyCompile: ~deserialize /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/bson/lib/bson.js:161:21
+      1  100.0%        LazyCompile: ~parse /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/commands.js:222:10
+      1  100.0%          LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:61:44
+      1    5.9%      LazyCompile: ~createHash node:crypto:132:20
+      1  100.0%        LazyCompile: ~passwordDigest /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:182:24
+      1  100.0%          LazyCompile: ~continueScramConversation /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%            LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1    5.9%      LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:193:34
+      1  100.0%        LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:147:60
+      1  100.0%          Function: ^moduleProvider node:internal/modules/esm/loader:452:28
+      1  100.0%            /snap/node/6905/bin/node
+      1    5.9%      LazyCompile: ~Hmac node:internal/crypto/hash:131:14
+      1  100.0%        LazyCompile: ~createHmac node:crypto:164:20
+      1  100.0%          LazyCompile: ~HMAC /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:225:14
+      1  100.0%            LazyCompile: ~continueScramConversation /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1    5.9%      LazyCompile: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:1249:13
+      1  100.0%        LazyCompile: ~YargsInstance file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:76:16
+      1  100.0%          LazyCompile: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/yargs/build/lib/yargs-factory.js:27:12
+      1  100.0%            Script: ~<anonymous> file:///home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/src/main.js:1:1
+      1    5.9%      LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sessions.js:134:43
+      1  100.0%        LazyCompile: ~maybeCallback /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/utils.js:336:23
+      1  100.0%          LazyCompile: ~endSession /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/sessions.js:130:15
+      1  100.0%            LazyCompile: ~executeOperationAsync /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/operations/execute_operation.js:15:37
+      1    5.9%      Function: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/on-finished/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1025:33
+      1    5.9%      Function: ^emit node:events:460:44
+      1  100.0%        LazyCompile: ~<anonymous> /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection_pool.js:380:38
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            LazyCompile: ~onMessage /home/lean/Documents/coderhouse/coderhouse-backend-32115/desafios/desafio-16/node_modules/mongodb/lib/cmap/connection.js:157:14
+      1    5.9%      Function: ^C node:internal/deps/cjs-module-lexer/dist/lexer:1:1152
+      1  100.0%        LazyCompile: ~parse node:internal/deps/cjs-module-lexer/dist/lexer:1:131
+      1  100.0%          LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:193:34
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:147:60
+
+     14    1.6%  node::loader::ModuleWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     14  100.0%    /snap/node/6905/bin/node
+      8   57.1%      Function: ^moduleStrategy node:internal/modules/esm/translators:114:56
+      8  100.0%        Function: ^moduleProvider node:internal/modules/esm/loader:452:28
+      8  100.0%          /snap/node/6905/bin/node
+      6   42.9%      LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      5   83.3%        Function: ^moduleProvider node:internal/modules/esm/loader:452:28
+      5  100.0%          /snap/node/6905/bin/node
+      1   16.7%        LazyCompile: ~moduleProvider node:internal/modules/esm/loader:452:28
+      1  100.0%          /snap/node/6905/bin/node
+
+      9    1.0%  node::crypto::TLSWrap::GetPeerCertificate(v8::FunctionCallbackInfo<v8::Value> const&)
+      9  100.0%    /snap/node/6905/bin/node
+      8   88.9%      LazyCompile: ~TLSSocket.getPeerCertificate node:_tls_wrap:992:50
+      8  100.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1524:25
+      8  100.0%          Function: ^emit node:events:460:44
+      8  100.0%            LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:926:43
+      1   11.1%      Function: ^TLSSocket.getPeerCertificate node:_tls_wrap:992:50
+      1  100.0%        LazyCompile: ~onConnectSecure node:_tls_wrap:1524:25
+      1  100.0%          Function: ^emit node:events:460:44
+      1  100.0%            Function: ^TLSSocket._finishInit node:_tls_wrap:926:43
