@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head'); %>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container-sm w-25 mt-5">
+      <form action="/register" method="post">
+        <div class="text-center">
+          <p>Tell us who you are!</p>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+          />
+          <label class="form-label" for="name">Full name</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+          />
+          <label class="form-label" for="email">Email address</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+          />
+          <label class="form-label" for="username">Username</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+          />
+          <label class="form-label" for="password">Password</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="text"
+            name="address"
+            id="address"
+            class="form-control"
+          />
+          <label class="form-label" for="address">Address</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="number"
+            name="age"
+            id="age"
+            class="form-control"
+          />
+          <label class="form-label" for="age">Age</label>
+        </div>
+
+        <div class="form-outline mb-4">
+          <input
+            required
+            type="tel"
+            name="phone"
+            id="phone"
+            class="form-control"
+          />
+          <label class="form-label" for="phone"
+            >Phone (Example: 54 9 11 4455 6677)</label
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mb-4">
+          Register
+        </button>
+
+        <div class="text-center">
+          <p>Already a member? <a href="/">Log in</a></p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

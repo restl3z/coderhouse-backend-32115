@@ -1,0 +1,2 @@
+[2022-12-25T19:08:33.534] [WARN] SERVER_LOG - DeprecationWarning: Mongoose: the `strictQuery` option will be switched back to `false` by default in Mongoose 7. Use `mongoose.set('strictQuery', false);` if you want to prepare for this change. Or use `mongoose.set('strictQuery', true);` to suppress this warning.
+[2022-12-25T20:44:28.269] [WARN] SERVER_LOG - ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
